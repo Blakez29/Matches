@@ -5,6 +5,9 @@ const womenTitle = ['Women\'s WWE Championship', 'Women\'s World HeavyWeight Cha
 const title = [false, false, false, false, true, false, true, false, false, true];
 const interfere = [true, false, false, false]
 const matchType = Math.floor(Math.random() * 2);
+let mensTitle = menTitle[Math.floor(Math.random()) * menTitle.length];
+let womensTitle = womenTitle[Math.floor(Math.random()) * womenTitle.length];
+let titleMatch = title[Math.floor(Math.random() * 10)]
 
 function whosFighting(num) {
     let man1 = men[Math.floor(Math.random() * men.length)];
@@ -26,14 +29,7 @@ function whosFighting(num) {
     }
     forTitle(num);
     interference(interfere, num);
-    if (num === 0) {
-        let manWin = [man1, man2];
-        console.log(`And the winner is...${manWin[Math.floor(Math.random()) * 2]}!`);
-    } else {
-        let womanWin = [woman1, woman2];
-        console.log(`And the winner is...${womanWin[Math.floor(Math.random()) * 2]}!`);
-    }
-
+    
     function interference(arr, num) {
         let interfere = arr[Math.floor(Math.random() * 2)]
         if (num === 0 && interfere) {
@@ -52,17 +48,32 @@ function whosFighting(num) {
             console.log(`Interference by ${woman3}`);
         }
     }
-}
 
 function forTitle(num) {
-    let titleMatch = title[Math.floor(Math.random() * 10)]
     if (titleMatch && num === 0) {
-        console.log(`For the ${menTitle[Math.floor(Math.random()) * menTitle.length]}!`);
+        console.log(`For the ${mensTitle}!`);
     } else if (titleMatch && num === 1) {
-        console.log(`For the ${womenTitle[Math.floor(Math.random()) * womenTitle.length]}!`);
+        console.log(`For the ${womensTitle}!`);
     }
 }
-
+if(titleMatch){
+    if (num === 0) {
+        let manWin = [man1, man2];
+        console.log(`And the winner of the ${mensTitle} is...${manWin[Math.floor(Math.random()) * 2]}!`);
+    } else {
+        let womanWin = [woman1, woman2];
+        console.log(`And the winner of the ${womensTitle} is...${womanWin[Math.floor(Math.random()) * 2]}!`);
+    }
+}else{
+    if (num === 0) {
+        let manWin = [man1, man2];
+        console.log(`And the winner is...${manWin[Math.floor(Math.random()) * 2]}!`);
+    } else {
+        let womanWin = [woman1, woman2];
+        console.log(`And the winner is...${womanWin[Math.floor(Math.random()) * 2]}!`);
+    }
+}
+}
 
 
 whosFighting(matchType);
