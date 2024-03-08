@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>WWE Randomizer</title>
+</head>
+
+<body>
+    <main id="app"></main>
+    <header>
+        <img id="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/219px-WWE_Logo.svg.png" />
+        <h1 id="title">Randomizer</h1>
+    </header>
+    <div id="match">
+        <img id="image1" class="images" src="https://i.pinimg.com/736x/16/56/e1/1656e1843d47ec82c72911d597bf1d47.jpg" />
+        <span id="vs">VS.</span>
+        <img id="image2" class="images"
+            src="https://hips.hearstapps.com/hmg-prod/images/mh-1-18-reigns-1674070087.png?crop=0.490xw:0.981xh;0.494xw,0.00321xh&resize=1200:*" />
+        </div>
+    <div id="names">
+        <h2 id="name1" class="name1">Cody Rhodes</h2>
+        <h2 id="name2" class="name2">Roman Reigns</h2>
+    </div>
+    <div id="title">
+        <img id="titleImg"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cc1de924-aae6-4b00-badb-41d27bd58c68/dfz7oh3-a6fdf013-eacc-4339-95b7-59d47d887604.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NjMWRlOTI0LWFhZTYtNGIwMC1iYWRiLTQxZDI3YmQ1OGM2OFwvZGZ6N29oMy1hNmZkZjAxMy1lYWNjLTQzMzktOTViNy01OWQ0N2Q4ODc2MDQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.A-IhVXeaQTOFeDjaeHcajS3-E6TICb6RgZEFhNl6yuE">
+        <h3 id="titleText">For The Universal Championship!</h3>
+    </div>
+    <div id="bell">
+        <img id="bellImg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU13k05qErTUJR8zobkSP_fvXXbJW-Kdo9ng&usqp=CAU">
+        <h3 id="bellText">Ding! Ding! Ding!</h3>
+    </div>
+    <div id="interference">
+        <img id="interferenceImg"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/88e30824-3c9a-4957-b6ab-394cb783aa20/dfdwngl-854ed640-540c-4ce1-8dbe-3532eea83289.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg4ZTMwODI0LTNjOWEtNDk1Ny1iNmFiLTM5NGNiNzgzYWEyMFwvZGZkd25nbC04NTRlZDY0MC01NDBjLTRjZTEtOGRiZS0zNTMyZWVhODMyODkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dRkTxRtcgEI6C56LHiBYjsyM6aad2cvaLx5UDGui0g4">
+        <h3 id="interferenceText">Oh no! An interference by Solo Sikoa!</h3>
+    </div>
+    <div id="winner">
+        <img id="winnerImg"
+            src="https://hips.hearstapps.com/hmg-prod/images/mh-1-18-reigns-1674070087.png?crop=0.490xw:0.981xh;0.494xw,0.00321xh&resize=1200:*" />
+        <h3 id="winnerText">And the winner is...Roman Reigns!</h3>
+    </div>
+    <div id="matchtypegen">
+        <button id="men" onClick="mensMatch()">Men</button>
+        <button id="women" onClick="womensMatch()">Women</button>
+    </div>
+    <div id="matchtype">
+        <button id="single">Singles Match</button>
+        <button id="tag">Tag</button>
+        <button id="triple">Triple Threat</button>
+        <button id="fatal">Fatal 4-Way</button>
+    </div>
+    <button id="create" onClick = "show()">Create Match</button>
+    <button id='clear' onClick = "clearOut()">Clear</button>
+    <script src='./app.js'></script>
+</body>
+
+</html>
