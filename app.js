@@ -3,7 +3,6 @@ function show() {
     const num2=Math.random();
     document.getElementById('vs').style.display = 'flex';
     document.getElementById('match').style.display = 'flex';
-    document.getElementById('names').style.display = 'flex';
     document.getElementById('bellImg').style.display = 'flex';
     document.getElementById('bellText').style.display = 'block';
     document.getElementById('winnerImg').style.display = 'flex';
@@ -32,7 +31,6 @@ function show() {
 function clearOut() {
     document.getElementById('vs').style.display = "none";
     document.getElementById('match').style.display = 'none';
-    document.getElementById('names').style.display = 'none';
     document.getElementById('titleImg').style.display = 'none';
     document.getElementById('titleText').style.display = 'none';
     document.getElementById('bellImg').style.display = 'none';
@@ -51,60 +49,224 @@ function clearOut() {
 const mens = [
     {
         name: 'Cody Rhodes',
-        img: 'https://i.pinimg.com/736x/16/56/e1/1656e1843d47ec82c72911d597bf1d47.jpg'
+        img: 'images/Men/cody.jpg'
     },
     {
         name: 'Roman Reigns',
-        img: "https://hips.hearstapps.com/hmg-prod/images/mh-1-18-reigns-1674070087.png?crop=0.490xw:0.981xh;0.494xw,0.00321xh&resize=1200:*"
+        img: "images/Men/roman.png"
     },
     {
         name: 'Solo Sikoa',
-        img: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/88e30824-3c9a-4957-b6ab-394cb783aa20/dfdwngl-854ed640-540c-4ce1-8dbe-3532eea83289.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg4ZTMwODI0LTNjOWEtNDk1Ny1iNmFiLTM5NGNiNzgzYWEyMFwvZGZkd25nbC04NTRlZDY0MC01NDBjLTRjZTEtOGRiZS0zNTMyZWVhODMyODkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dRkTxRtcgEI6C56LHiBYjsyM6aad2cvaLx5UDGui0g4'
+        img: 'images/Men/Solo.png'
     },
     {
         name: 'John Cena',
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmtk6BOqva0mi55IBqZIAFlkt5Qw_LETVuQ&usqp=CAU'    
-    }
+        img: 'images/Men/cena.jpg'    
+    },
+    {
+        name: 'Ricochet',
+        img: 'images/Men/Ricochet.png'
+    },
+    {
+        name: 'CM Punk',
+        img: 'images/Men/cm-punk.png'
+    },
+    {
+        name: 'Dominik Mysterio',
+        img: 'images/Men/dominik-mysterio.png'
+    },
+    {
+        name: 'Rey Mysterio',
+        img: 'images/Men/Rey_Mysterio.webp'
+    },
+    {
+        name: 'AJ Styles',
+        img: 'images/Men/aj-styles.png'
+    },
+    {
+        name: 'Bobby Lashley',
+        img: 'images/Men/bobby-lashley.png'
+    },
+    {
+        name: 'Chad Gable',
+        img: 'images/Men/Chad_Gable.webp'
+    },
+    {
+        name: 'Drew McIntyre',
+        img: 'images/Men/Drew_McIntyre.webp'
+    },
+    {
+        name: 'Gunther',
+        img: 'images/Men/Gunther.webp'
+    },
+    {
+        name: 'Jey uso',
+        img: 'images/Men/Jey_Uso.webp'
+    },
+    {
+        name: 'Jimmy Uso',
+        img: 'images/Men/Jimmy_Uso_2.webp'
+    },
+    {
+        name: 'Kofi Kingston',
+        img: 'images/Men/kofi-kingston.png'
+    },
+    {
+        name: 'Kurt Angle',
+        img: 'images/Men/kurt-angle.png'
+    },
+    {
+        name: 'LA Knight',
+        img: 'images/Men/la-knight.png'
+    },
+    {
+        name: 'R Truth',
+        img: 'images/Men/r-truth.png'
+    },
+    {
+        name: 'Sami Zayn',
+        img: 'images/Men/sami-zayn.png'
+    },
+    {
+        name: 'Seth Rollins',
+        img: 'images/Men/seth-rollins.png'
+    },
+    {
+        name: 'Shinsuke Nakamura',
+        img: 'images/Men/shinsuke-nakamura.webp'
+    },
+    {
+        name: 'The Rock',
+        img: 'images/Men/The_Rock.webp'
+    },
+    {
+        name: 'Triple H',
+        img: 'images/Men/Tripleh.webp'
+    },
+    {
+        name: 'The Undertaker',
+        img: 'images/Men/undertaker.png'
+    },
 ];
 
 const mensTitles = [
     {
         name: 'Universal WWE Championship',
-        img: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cc1de924-aae6-4b00-badb-41d27bd58c68/dfz7oh3-a6fdf013-eacc-4339-95b7-59d47d887604.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NjMWRlOTI0LWFhZTYtNGIwMC1iYWRiLTQxZDI3YmQ1OGM2OFwvZGZ6N29oMy1hNmZkZjAxMy1lYWNjLTQzMzktOTViNy01OWQ0N2Q4ODc2MDQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.A-IhVXeaQTOFeDjaeHcajS3-E6TICb6RgZEFhNl6yuE'
+        img: 'images/mTitles/Universal.png'
     },
     {
         name: 'World Heavyweight Championship',
-        img: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/88e30824-3c9a-4957-b6ab-394cb783aa20/dg1bfj2-dfc14294-a127-44df-a762-7c11de5cfa23.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg4ZTMwODI0LTNjOWEtNDk1Ny1iNmFiLTM5NGNiNzgzYWEyMFwvZGcxYmZqMi1kZmMxNDI5NC1hMTI3LTQ0ZGYtYTc2Mi03YzExZGU1Y2ZhMjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.bksKM47AR_0dvNUnUi9YPnGYqSqCTo3H8WckIF-m3x4'
+        img: 'images/mTitles/Heavyweight.png'
+    },
+    {
+        name: 'Intercontinental Championship',
+        img: 'images/mTitles/WWE_Intercontinental_Championship.png'
+    },
+    {
+        name: 'United States Championship',
+        img: 'images/mTitles/United_states.png'
     }
 ];
 
 const womens = [
     {
         name: 'Becky Lynch',
-        img: 'https://static.wikia.nocookie.net/bwwe/images/0/0b/Becky_Lynch_2.png/revision/latest?cb=20230201232613'
+        img: 'images/Women/Becky_Lynch_2.webp'
     },
     {
         name: 'Bianca Bel-Air',
-        img: "https://static.wikia.nocookie.net/bwwe/images/2/23/Bianca_Belair_2.png/revision/latest?cb=20220904160744"
+        img: "images/Women/Bianca_Belair_2.webp"
     },
     {
         name: 'Rhea Ripley',
-        img: 'https://static.wikia.nocookie.net/prowrestling/images/1/1b/Rhea_Ripley_Judgement_Day_Look.png/revision/latest?cb=20230423090024'
+        img: 'images/Women/Rhea.webp'
     },
     {
         name: 'Nia Jax',
-        img: 'https://www.thesmackdownhotel.com/images/wrestling/wrestlers/full-body/nia-jax.png'    
-    }
+        img: 'images/Women/nia-jax.png'    
+    },
+    {
+        name: 'Asuka',
+        img: 'images/Women/Asuka.png'
+    },
+    {
+        name: 'Bayley',
+        img: 'images/Women/Bayley.webp'
+    },
+    {
+        name: 'Charlotte Flair',
+        img: 'images/Women/charlotte-flair.png'
+    },
+    {
+        name: 'Chelsea Green',
+        img: 'images/Women/Chelsea_Green_2023.webp'
+    },
+    {
+        name: 'Dakota Kai',
+        img: 'images/Women/Dakota_Kai_2023.webp'
+    },
+    {
+        name: 'Iyo Sky',
+        img: 'images/Women/Iyo_Sky.webp'
+    },
+    {
+        name: 'Jade Cargill',
+        img: 'images/Women/jade-cargill.png'
+    },
+    {
+        name: 'Lita',
+        img: 'images/Women/Lita_2.webp'
+    },
+    {
+        name: 'Liv Morgan',
+        img: 'images/Women/liv-morgan.png'
+    },
+    {
+        name: 'Mia Yim',
+        img: 'images/Women/mia-yim.png'
+    },
+    {
+        name: 'Naomi',
+        img: 'images/Women/naomi.png'
+    },
+    {
+        name: 'Piper Niven',
+        img: 'images/Women/piper-niven.png'
+    },
+    {
+        name: 'Raquel Rodriguez',
+        img: 'images/Women/Raquel.webp'
+    },
+    {
+        name: 'Shayna Bazler',
+        img: 'images/Women/Shayna_Baszle.webp'
+    },
+    {
+        name: 'Shotzi',
+        img: 'images/Women/Shotzi_Blackheart.webp'
+    },
+    {
+        name: 'Tiffany Stratton',
+        img: 'images/Women/Tiffany_Stratton_2023.webp'
+    },
+    {
+        name: 'Trish Stratus',
+        img: 'images/Women/trish-stratus.png'
+    },
+    {
+        name: 'Zoey Stark',
+        img: 'images/Women/Zoey_Stark_NXT_2.webp'
+    },
 ];
 
 const womensTitles = [
     {
         name: 'Women\'s WWE Championship',
-        img: 'https://e7.pngegg.com/pngimages/743/123/png-clipart-wwe-raw-women-s-championship-wwe-smackdown-women-s-championship-professional-wrestling-championship-wwe-women-s-championship-title-emblem-professional-wrestling.png'
+        img: 'images/wTitles/WWE_Women\'s_Championship_(2023).jpeg'
     },
     {
         name: 'Women\'s World Heavyweight Championship',
-        img: 'https://images.footballfanatics.com/wwe-merchandise/wwe-womens-world-championship-replica-title-belt_ss5_p-200117184+pv-1+u-ohhw5dazl8hf7pjtpew3+v-gfuc9ez4yx7rilhstbni.jpg?_hv=2&w=900'
+        img: 'images/wTitles/Women\'s_World_Championship_(WWE)_2023.jpeg'
     },
 ];
 
@@ -131,7 +293,7 @@ function mensMatch(){
         const title = mensTitles.length;
         let titleUp = Math.floor(Math.random() * title);
         document.getElementById('titleText').innerHTML = `For the ${mensTitles[titleUp].name}!`;
-        document.getElementById('titleImg').src = mensTitles[1].img;
+        document.getElementById('titleImg').src = mensTitles[titleUp].img;
     }
 
     function interference(){

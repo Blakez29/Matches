@@ -34,15 +34,16 @@ span{
     margin:0;
     position: absolute;
 
+
 }
 #match{
     display: none;
     justify-content: space-evenly;
 }
-#names{
-    display: none;
-    justify-content: space-evenly;
-}
+figcaption{
+    text-align: center;
+    font-size: 25px;
+ }
 #title img{
     display: none;
     margin-left: auto;
