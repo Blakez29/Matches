@@ -1,31 +1,34 @@
 function show() {
     const num1=Math.random();
     const num2=Math.random();
-    document.getElementById('vs').style.display = 'flex';
-    document.getElementById('match').style.display = 'flex';
-    document.getElementById('bellImg').style.display = 'flex';
-    document.getElementById('bellText').style.display = 'block';
-    document.getElementById('winnerImg').style.display = 'flex';
-    document.getElementById('winnerText').style.display = 'block';
     document.getElementById('create').style.display = 'none';
     document.getElementById("matchtypegen").style.display = 'none';
+    document.getElementById('vs').style.display = 'flex';
+    document.getElementById('match').style.display = 'flex';
+    sleep(1000).then(() => {document.getElementById('bellImg').style.display = 'flex'});
+    sleep(1000).then(() => {document.getElementById('bellText').style.display = 'block'});
+    sleep(2000).then(() => {document.getElementById('winnerImg').style.display = 'flex'});
+    sleep(2000).then(() => {document.getElementById('winnerText').style.display = 'block'});
     document.getElementById("clear").style.display = 'block';
 
     if(num1 > 0.7){
-        document.getElementById("interferenceImg").style.display = 'flex';
-        document.getElementById("interferenceText").style.display = 'block';  
+        sleep(1500).then(() => {document.getElementById("interferenceImg").style.display = 'flex'});
+        sleep(1500).then(() => {document.getElementById("interferenceText").style.display = 'block'});  
     }else{
         document.getElementById("interferenceImg").style.display = 'none';
         document.getElementById("interferenceText").style.display = 'none';
     };
     
     if(num2 > 0.7){
-        document.getElementById('titleImg').style.display = 'flex';
-        document.getElementById('titleText').style.display = 'block';
+        sleep(500).then(() => {document.getElementById('titleImg').style.display = 'flex'});
+        sleep(500).then(() => {document.getElementById('titleText').style.display = 'block'});
     }else{
         document.getElementById('titleImg').style.display = 'none';
         document.getElementById('titleText').style.display = 'none';  
         };
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+          }
     };
 
 function clearOut() {
